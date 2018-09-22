@@ -20,8 +20,9 @@ app.get("/", (req, res) => {
         res.render("food page", {food_list: food_list});
     })
 });
+}//Need to invoke function
 
-}
+
 
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("fastfood_guru up");
