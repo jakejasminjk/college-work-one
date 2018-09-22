@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 (foodStuff) => {
     food_list.forEach((entry) => {
-    app.get("entry", (req, res) => {
+    app.get(`entry`, (req, res) => {
         res.render("food page", {food_list: food_list});
     })
 });
