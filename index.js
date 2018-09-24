@@ -1,9 +1,9 @@
 let express = require("express"),
     app = express(),
     request= require("request"),
-    mongoose = require("mongoose");
+    mongoose = require("mongoose"),
+    cheerio = require("cheerio");
     
-
 //Config    
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -14,14 +14,14 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
-(foodStuff) => {
+function foodStuff() {
     food_list.forEach((entry) => {
-    app.get(`entry`, (req, res) => {
-        res.render("food page", {food_list: food_list});
+    app.get(`/entry`, (req, res) => {
+        res.render("foodPage", {food_list: food_list});
     })
 });
-}//Need to invoke function
-
+}
+foodStuff();
 
 
 app.listen(process.env.PORT, process.env.IP, function(){
