@@ -12,6 +12,14 @@ let express     = require("express"),
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 let food_list = ["Mcdonalds", "Burger King"]
+/*
+Scraping steps
+Step 1: Get and setup request, cheerio, and request-promise
+Step 2: create an object that has the options(uri, promise for the reques-promise
+
+
+*/
+
 
 //Routes
 app.get("/", (req, res) => {
