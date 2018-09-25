@@ -1,9 +1,13 @@
-let express = require("express"),
-    app = express(),
-    request= require("request"),
-    mongoose = require("mongoose"),
-    cheerio = require("cheerio");
-    
+let express     = require("express"),
+    app         = express(),
+    request     = require("request"),
+    rp          = require("request-promise"),
+    mongoose    = require("mongoose"),
+    cheerio     = require("cheerio");
+
+//https://codeburst.io/an-introduction-to-web-scraping-with-node-js-1045b55c63f7
+//https://www.esquire.com/food-drink/restaurants/a15120/biggest-fast-food-11215111/
+
 //Config    
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
